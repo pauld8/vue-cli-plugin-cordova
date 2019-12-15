@@ -38,7 +38,8 @@ module.exports = (api, options) => {
     info(`executing "cordova run ${platform}" in folder ${srcCordovaPath}`)
     return spawn.sync('cordova', [
       'run',
-      platform
+      platform,
+      '--device'
     ], {
       cwd: srcCordovaPath,
       env: process.env,
